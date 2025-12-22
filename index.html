@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Flask Server Demo</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to C-Flask Server</h1>
+
+    <p>このページはC言語で実装されたWebサーバーから配信されています。</p>
+
+    <h2>1. Template Engine Test</h2>
+    <div class="card">
+        <p>サーバーからの動的データ:</p>
+        <p class="dynamic-content">{{get_data}}</p>
+    </div>
+
+    <h2>2. Routing & REST API Test</h2>
+    <p>以下のボタンをクリックして、異なるルート（URL）へのリクエストをテストしてください。</p>
+    
+    <div>
+        <a href="/api/data" class="button">JSON API テスト (/api/data)</a>
+        
+        <a href="/" class="button secondary">トップへ戻る</a>
+    </div>
+
+    <h2>3. Cookie & Session Test</h2>
+    <p>ログインURLにアクセスして、HTTPレスポンスヘッダで <code>Set-Cookie</code> が付与されるか確認します。</p>
+    
+    <div>
+        <a href="/login" class="button" style="background-color: #8e44ad;">ログイン (Cookieセット)</a>
+    </div>
+
+    <h2>4. POST Data Test</h2>
+    <p>フォームからデータを送信し、サーバーで解析して表示します。</p>
+    <div>
+        <a href="/form" class="button">メッセージ投稿フォームへ</a>
+    </div>
+
+    <h2>5. Logout (Delete Cookie)</h2>
+    <p>セットされたCookieを削除します。</p>
+    <div>
+        <a href="/logout" class="button" style="background-color: #e74c3c;">ログアウト</a>
+    </div>
+
+    <h2>6. Delayed Redirect</h2>
+    <p>3秒後に自動的にトップページに戻ります。</p>
+    <div>
+        <a href="/wait" class="button" style="background-color: #f39c12;">3秒後にリダイレクト</a>
+    </div>
+</div>
+
+</body>
+</html>
